@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class employer extends JFrame {
+public class admin extends JFrame {
 
 	/**
 	 * 
@@ -22,7 +22,7 @@ public class employer extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					employer frame = new employer();
+					admin frame = new admin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,11 +34,11 @@ public class employer extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public employer() {
+	public admin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(600, 600, 750, 750);
 		this.setLocation(160, 10);
-		this.setTitle("employer");
+		this.setTitle("admin");
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
