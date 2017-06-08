@@ -79,4 +79,58 @@ Connection connexion = Dao.getConnection();
 		
 	}
 
+	@Override
+	public void ajouterProjet() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierProjet() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supprimerProjet() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ajouterService() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierService() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void arreterService() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ajouterEmployer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierEmployer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supprimerEmployer() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

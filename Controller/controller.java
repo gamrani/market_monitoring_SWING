@@ -10,10 +10,12 @@ public class controller {
 	
 	public controller(String s)
 	{
+		System.out.println("Con");
 		if(s.equals("acceuil")) { 
 			acceuil a = new acceuil();
 			}
-		else if (s.equals("admin")){
+		else if (s.equals("administrateur")){
+			System.out.println("admin");
 			admin ad = new admin();
 			}
 		else if (s.equals("employer")){

@@ -23,6 +23,8 @@ import javax.swing.border.EmptyBorder;
 
 import Controller.controller;
 import metier.Metier;
+import java.awt.SystemColor;
+import javax.swing.JSlider;
 
 public class acceuil extends JFrame {
 	
@@ -52,13 +54,15 @@ public class acceuil extends JFrame {
 	public acceuil()
 	{
 		panel = new JPanel();
+		panel.setForeground(SystemColor.activeCaptionBorder);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.inactiveCaption);
 		this.setResizable(false);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setBounds(600, 600, 750, 750);
 		this.setLocation(160, 10);
 		
-		this.add(new JLabel(new ImageIcon("C:\\Users\\lenovo\\Desktop\\Market_Monitoring\\monitoring\\logo.png")));
+		getContentPane().add(new JLabel(new ImageIcon("C:\\Users\\lenovo\\Desktop\\Market_Monitoring\\monitoring\\logo.png")));
 		//"C:\\Users\\lenovo\\Desktop\\Market_Monitoring\\monitoring\\logo.png"
 		//JLabel background=new JLabel(new ImageIcon("C:\\Users\\lenovo\\Desktop\\Market_Monitoring\\monitoring\\logo.png"));
 		//contentPane.add(background);
@@ -71,8 +75,8 @@ public class acceuil extends JFrame {
 		//this.setVisible(true);
 		
 		panel.setBorder(new BevelBorder(BevelBorder.RAISED, null, new Color(128, 128, 128), null, null));
-		panel.setBackground(new Color(128, 128, 128));
-		panel.setBounds(39, 540, 624, 132);
+		panel.setBackground(SystemColor.inactiveCaptionBorder);
+		panel.setBounds(54, 538, 624, 132);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -115,11 +119,12 @@ public class acceuil extends JFrame {
 			public void actionPerformed(ActionEvent event){
 				       Metier m = new Metier();
 			           if(!m.login(login.getText(),password.getText())){
-			        	   usernameError.setText("CONNECTION NOT ALLOWED");
+			        	   usernameError.setText(" CONNECTION NOT ALLOWED , YOU SHOULD VERIFY YOUR INFORMATIONS ");
 			        	    panel.setBackground(Color.RED);
 			           }else{
+			        	 
 			        	   
-			        	 controller c = new controller(m.statut(login.getText(), password.getText()));
+			        	 controller c = new controller((String)m.statut(login.getText(), password.getText()));
 			        	   setVisible(false);
 			        	   
 			           }
@@ -131,7 +136,5 @@ public class acceuil extends JFrame {
 		
 		this.setVisible(true);
 	}
-	
-	
 }
 
